@@ -4,7 +4,7 @@ const dbHelper = require('./dbHelper');
 
 const subscriptionIdAdd = '600020d34c3723284ca1b22b'
 const subscriptionIdRemove = '5fbfc14d0d9f0b17c6091c17'
-const baseURL = "https://phillipinesapp.azurewebsites.net"
+const baseURL = "https://phillipinesapp.azurewebsites.net/"
 
 let app = express()
 
