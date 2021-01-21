@@ -20,7 +20,7 @@ app.use(function(req, res, next) {
 
 app.use(bodyParser.json());
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
 	res.render("index", {
 		baseURL: baseURL
 	});
@@ -59,7 +59,7 @@ app.post('/', async (req, res) => {
 		}
 	}
 
-  res.send("Done")
+	res.send("Done")
 })
 
 app.get('/getdata', async (req, res) => {
@@ -79,6 +79,10 @@ app.get('/getdata', async (req, res) => {
 		console.log("Unable to connect to database")
 		res.send("Unable to connect to database")
 	});
+})
+
+app.get('/dummy', (req, res) => {
+	res.send("All OK")
 })
 
 let port = process.env.PORT || 3000
